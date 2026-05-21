@@ -2,7 +2,7 @@
   <img src="https://github.com/user-attachments/assets/4f3d1ba3-ea8e-4ecd-b59d-c1c8a501337c" alt="RepShot Logo" width="680"/>
 </p>
 
-# ⚡ RepShot — Security Finding Cards for Burp Suite
+# ⚡ RepShot  _·_  Security Finding Card for Burp Suite
 
 > **Turn your Burp Suite findings into clean, professional cards, ready for reports, bug bounty submissions, and social sharing.**
 

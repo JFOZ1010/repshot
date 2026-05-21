@@ -1,14 +1,23 @@
-# ⚡ RepShot - Security Finding Cards for Burp Suite
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/4f3d1ba3-ea8e-4ecd-b59d-c1c8a501337c" alt="RepShot Logo" width="680"/>
+</p>
 
-> **Turn your Burp Suite findings into clean, professional cards ready for reports, bug bounty submissions, and social sharing.**
+# ⚡ RepShot — Security Finding Cards for Burp Suite
 
-![RepShot Banner](https://img.shields.io/badge/Burp%20Suite-Extension-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEzIDNMMy4yMyAyMS4yOWwuNTYgMS4xNGgxNi40MmwuNTYtMS4xNEwxMSAzaDJ6Ii8+PC9zdmc+) ![Java](https://img.shields.io/badge/Java-17%2B-blue?style=for-the-badge&logo=java) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+> **Turn your Burp Suite findings into clean, professional cards, ready for reports, bug bounty submissions, and social sharing.**
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Burp%20Suite-Extension-orange?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Java-17%2B-blue?style=for-the-badge&logo=java"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
+  <img src="https://img.shields.io/badge/Burp-Champion-red?style=for-the-badge"/>
+</p>
 
 ---
 
 ## The Problem
 
-Every pentester knows the moment: you've just confirmed a SQL injection, an XSS payload fired, or a path traversal returned `/etc/passwd`. Now you need to document it.
+Every pentester knows the moment: you've just confirmed a `SQL injection`, an `XSS` payload, or a path traversal returned `/etc/passwd`. Now you need to document it.
 
 The usual workflow looks like this:
 
@@ -17,7 +26,7 @@ The usual workflow looks like this:
 3. Take another screenshot of the response
 4. Draw red boxes around the relevant parts manually
 5. Open your report template
-6. Copy-paste the vulnerability name, write the business impact from scratch
+6. Copy/paste the vulnerability name, write the business impact from scratch
 7. Repeat for every single finding
 
 When you're running a pentest or a bug bounty session with 10, 15, or 20 findings - this process kills your momentum. You spend more time documenting than hacking.
@@ -90,7 +99,7 @@ Requirements: Java 17+, Maven 3.8+
 
 ### Documenting a finding
 
-1. **Fill in the finding details** — title, vulnerability type, severity, your handle
+1. **Fill in the finding details** - title, vulnerability type, severity, your handle
    - Business impact auto-fills based on the vulnerability type selected
    - Selecting a different type updates the impact automatically
    - Choose "Other..." to type a custom vulnerability name
@@ -101,7 +110,7 @@ Requirements: Java 17+, Maven 3.8+
 
 2. **Navigate to the relevant part** of the request or response using scroll
 
-3. **Click `[ 📷 Capture ]`** — this captures exactly what's visible in the panel at that moment (WYSIWYG)
+3. **Click `[ 📷 Capture ]`** - this captures exactly what's visible in the panel at that moment (_What You See is What You Get_)
 
 4. **Annotate with red boxes** (optional):
    - Click `[ ✏ Draw Box ]` to enter drawing mode
@@ -145,13 +154,19 @@ Each template is written in plain business language no jargon, so the impact mak
 
 ## Why RepShot Exists
 
-I built RepShot because i was spending too much time doing the same repetitive documentation work on every engagement.
+> *"800 lines of HTML. The evidence is on line 697."*
 
-The worst part wasn't writing the report it was the screenshot workflow. A response body with 800 lines of HTML, and the evidence is on line 697. You have to scroll there, take a screenshot with Flameshot, draw the red box manually, crop it, save it, name it, and then go back to the report. Times 15 findings.
+I was spending too much time on the same repetitive documentation work on every engagement.
+The worst part wasn't writing the report, it was this:
 
-RepShot captures exactly what you're looking at in Burp, lets you annotate it inline, and exports a card that works for both technical reports and non-technical stakeholders. The same PNG that goes into a _CVSS_ report can go on LinkedIn without looking like a raw terminal dump.
+RepShot captures exactly what you're looking at in Burp, lets you annotate inline,
+and exports a card that works for both technical reports and non-technical stakeholders.
 
-It also auto-fills the business impact; because "An attacker can exploit this SQL injection to extract the entire database including user credentials, PII, and business-critical data" is something I've typed some variation of a hundred times.
+> The same PNG that goes into a pentest report can go on LinkedIn
+> without looking like a raw terminal dump.
+
+It also auto-fills the business impact. Because *"An attacker can exploit this SQL injection
+to extract the entire database..."* is something I've typed some variation of a hundred times.
 
 ---
 
@@ -169,27 +184,31 @@ All contributions welcome.
 
 ## Built With
 
-- [Burp Suite Montoya API](https://portswigger.net/burp/documentation/desktop/extensions/creating) — extension framework
-- Java Swing - UI and viewport capture
-- Graphics2D - HD PNG rendering
-- Maven - build system
+- [Burp Suite Montoya API](https://portswigger.net/burp/documentation/desktop/extensions/creating): extension framework
+- Java Swing: UI and viewport capture
+- Graphics2D: HD PNG rendering
+- Maven: build system
 
 ---
 
 ## License
 
-MIT — use it, fork it, improve it.
+MIT - use it, fork it, improve it.
 
 ---
 
-## Author
+## `Whoami`
 
-<img width="2400" height="1522" alt="repshot-finding2" src="https://github.com/user-attachments/assets/c945978c-46cc-401e-9b56-07e6e5f29b99" />
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQHRqhzMFLC3sg/profile-displayphoto-scale_400_400/B4EZ4JZ7UCJoAk-/0/1778274253615?e=1781136000&v=beta&t=0hia5hqnxB2aKPZyR3sUQSzwE4P1YiTjFTauy-bPR8I" width="80" align="left" style="border-radius:50%; margin-right:16px"/>
 
-**Juan Felipe Oz** · [@JF0x0r](https://twitter.com/Pwnedrar_)
+**Juan Felipe Oz** - Application Security Engineer & Security Researcher based in Colombia.
 
-*Burp Champion · Application Security Engineer · Bug Bounty Hunter*
+   Software Developer · AppSec Engineer · Security Researcher
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-juanfelipeoz-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/juanfelipeoz/)
+[![Web](https://img.shields.io/badge/Web-juanfelipeoz.com-orange?style=flat&logo=firefox)](https://juanfelipeoz.com)
+[![X](https://img.shields.io/badge/X-@Pwnedrar__-black?style=flat&logo=x)](https://twitter.com/Pwnedrar_)
 
 ---
 
-*Built with frustration and too many Flameshot screenshots.*
+> *Built with frustration and too many Flameshot screenshots.*

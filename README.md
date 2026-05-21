@@ -1,6 +1,6 @@
-# ⚡ RepShot — Security Finding Cards for Burp Suite
+# ⚡ RepShot - Security Finding Cards for Burp Suite
 
-> **Turn your Burp Suite findings into clean, professional cards — ready for reports, bug bounty submissions, and social sharing.**
+> **Turn your Burp Suite findings into clean, professional cards ready for reports, bug bounty submissions, and social sharing.**
 
 ![RepShot Banner](https://img.shields.io/badge/Burp%20Suite-Extension-orange?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTEzIDNMMy4yMyAyMS4yOWwuNTYgMS4xNGgxNi40MmwuNTYtMS4xNEwxMSAzaDJ6Ii8+PC9zdmc+) ![Java](https://img.shields.io/badge/Java-17%2B-blue?style=for-the-badge&logo=java) ![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
@@ -12,7 +12,7 @@ Every pentester knows the moment: you've just confirmed a SQL injection, an XSS 
 
 The usual workflow looks like this:
 
-1. Open Flameshot or a screenshot tool
+1. Open _Flameshot_ or a screenshot tool
 2. Take a screenshot of the request
 3. Take another screenshot of the response
 4. Draw red boxes around the relevant parts manually
@@ -20,13 +20,13 @@ The usual workflow looks like this:
 6. Copy-paste the vulnerability name, write the business impact from scratch
 7. Repeat for every single finding
 
-When you're running a pentest or a bug bounty session with 10, 15, or 20 findings — this process kills your momentum. You spend more time documenting than hacking.
+When you're running a pentest or a bug bounty session with 10, 15, or 20 findings - this process kills your momentum. You spend more time documenting than hacking.
 
 **RepShot was built to fix that.**
 
 ---
 
-## What RepShot Does
+## What RepShot Does ?
 
 RepShot is a Burp Suite extension that adds a **"Send to RepShot"** option to your Repeater context menu. From there, you get a dedicated panel where you can:
 
@@ -45,45 +45,27 @@ No more context switching. No more Flameshot. No more writing "An attacker could
 
 > *Example finding card exported by RepShot*
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│ ⚡ RepShot   Security Finding Card              2026-05-16   │
-├─────────────────────────────────────────────────────────────┤
-│ [CRITICAL]  SQL Injection (Error-Based)    Reported by: @JF0x0r │
-│                                                             │
-│ SQL Injection in /api/login                                 │
-│ BUSINESS IMPACT                                             │
-│ │ Attacker can extract sensitive database contents          │
-│ │ including credentials, PII, and business-critical data.  │
-├──────────────────────┬──────────────────────────────────────┤
-│ [REQ]                │ [RES]                                │
-│ POST /api/login      │ HTTP/1.1 500 Internal Server Error   │
-│ Host: target.com     │ ...                                  │
-│ ...                  │ SQL syntax error near '1=1'--        │
-│ user=admin'1=1--     │                                      │
-└──────────────────────┴──────────────────────────────────────┘
-│ ⚡ RepShot  |  Created by Juan Felipe Oz aka @JF0x0r  |  portswigger.net │
-```
+<img width="2400" height="1522" alt="repshot-finding2" src="https://github.com/user-attachments/assets/7fda7566-aa37-4624-a8ea-ecb6f72fc720" />
 
 ---
 
 ## Installation
 
-### Option A — Use the prebuilt JAR (recommended)
+### Option A - Use the prebuilt JAR (recommended)
 
 1. Download `repshot-1.0.0.jar` from the [Releases](../../releases) page
 2. Open Burp Suite
 3. Go to **Extensions → Add**
 4. Extension type: **Java**
 5. Select the downloaded JAR
-6. Click **Next** — you should see `RepShot loaded` in the Output tab
+6. Click **Next** - you should see `RepShot loaded` in the Output tab
 
 **Requirements:** Burp Suite 2023.x or later · Java 17+ on your system
 
-### Option B — Build from source
+### Option B - Build from source
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/repshot.git
+git clone https://github.com/JFOZ1010/repshot.git
 cd repshot
 mvn package
 # JAR will be at target/repshot-1.0.0.jar
@@ -98,8 +80,13 @@ Requirements: Java 17+, Maven 3.8+
 ### Basic workflow
 
 1. Send a request to **Repeater** and fire it
-2. **Right-click** anywhere in the request/response → **"📸 Send to RepShot"**
-3. The RepShot panel opens with your request and response loaded
+2. **Right-click** anywhere in the request/response → **📸 Send to RepShot**
+   
+      <img width="602" height="177" alt="image" src="https://github.com/user-attachments/assets/3a2bd081-dce6-4f0d-8916-8d61e9f5d581" />
+      
+4. The RepShot panel opens with your request and response loaded
+
+   <img width="1166" height="781" alt="image" src="https://github.com/user-attachments/assets/171d7fd0-987d-4604-882c-5fc85a539ae1" />
 
 ### Documenting a finding
 
@@ -107,6 +94,10 @@ Requirements: Java 17+, Maven 3.8+
    - Business impact auto-fills based on the vulnerability type selected
    - Selecting a different type updates the impact automatically
    - Choose "Other..." to type a custom vulnerability name
+  
+     <img width="1059" height="197" alt="image" src="https://github.com/user-attachments/assets/d44b0f44-2ca3-4d29-be0d-74a6d83af480" />
+     <img width="622" height="131" alt="image" src="https://github.com/user-attachments/assets/ab04ddf8-438b-43a4-bbf1-2dbc43a835d2" />
+
 
 2. **Navigate to the relevant part** of the request or response using scroll
 
@@ -115,15 +106,20 @@ Requirements: Java 17+, Maven 3.8+
 4. **Annotate with red boxes** (optional):
    - Click `[ ✏ Draw Box ]` to enter drawing mode
    - Click and drag to draw annotation rectangles over the payload or evidence
+     <img width="1010" height="515" alt="image" src="https://github.com/user-attachments/assets/f7f2539b-0d8b-4091-81d1-cabc9427880c" />
    - Click `[ Clear Boxes ]` to remove all boxes
    - Re-capture after drawing to include the boxes in the export
+   - Click on `[ ✏ Draw Box ]` again to exit the context of the red box and have the **response scroll**.
 
 5. **Search** with `Cmd+F` (macOS) or `Ctrl+F` (Windows/Linux):
    - Type to find matches in real time, highlighted in yellow
+     <img width="566" height="487" alt="image" src="https://github.com/user-attachments/assets/79a7f295-7a53-4165-bbd8-2bf91c3142ab" />
    - Navigate with `‹` and `›` buttons
    - Press `Escape` to close
 
 6. Click **`Preview Card`** to see the result before saving
+   
+<img width="588" height="185" alt="image" src="https://github.com/user-attachments/assets/3100eb38-df15-4413-929d-70daafc30665" />
 
 7. Click **`Export PNG`** to save the HD card (2400px wide, print-quality)
 
@@ -143,19 +139,19 @@ RepShot includes pre-written business impact templates for 30 vulnerability type
 | Client-Side | Prototype Pollution, JWT Vulnerabilities |
 | Other | Insecure File Upload, Mass Assignment, Insecure Deserialization, Business Logic Flaw, Other... |
 
-Each template is written in plain business language — no jargon — so the impact makes sense to a non-technical audience.
+Each template is written in plain business language no jargon, so the impact makes sense to a non-technical audience.
 
 ---
 
 ## Why RepShot Exists
 
-I built RepShot because I was spending too much time doing the same repetitive documentation work on every engagement.
+I built RepShot because i was spending too much time doing the same repetitive documentation work on every engagement.
 
-The worst part wasn't writing the report — it was the screenshot workflow. A response body with 800 lines of HTML, and the evidence is on line 697. You have to scroll there, take a screenshot with Flameshot, draw the red box manually, crop it, save it, name it, and then go back to the report. Times 15 findings.
+The worst part wasn't writing the report it was the screenshot workflow. A response body with 800 lines of HTML, and the evidence is on line 697. You have to scroll there, take a screenshot with Flameshot, draw the red box manually, crop it, save it, name it, and then go back to the report. Times 15 findings.
 
-RepShot captures exactly what you're looking at in Burp, lets you annotate it inline, and exports a card that works for both technical reports and non-technical stakeholders. The same PNG that goes into a CVSS report can go on LinkedIn without looking like a raw terminal dump.
+RepShot captures exactly what you're looking at in Burp, lets you annotate it inline, and exports a card that works for both technical reports and non-technical stakeholders. The same PNG that goes into a _CVSS_ report can go on LinkedIn without looking like a raw terminal dump.
 
-It also auto-fills the business impact — because "An attacker can exploit this SQL injection to extract the entire database including user credentials, PII, and business-critical data" is something I've typed some variation of a hundred times.
+It also auto-fills the business impact; because "An attacker can exploit this SQL injection to extract the entire database including user credentials, PII, and business-critical data" is something I've typed some variation of a hundred times.
 
 ---
 
@@ -174,9 +170,9 @@ All contributions welcome.
 ## Built With
 
 - [Burp Suite Montoya API](https://portswigger.net/burp/documentation/desktop/extensions/creating) — extension framework
-- Java Swing — UI and viewport capture
-- Graphics2D — HD PNG rendering
-- Maven — build system
+- Java Swing - UI and viewport capture
+- Graphics2D - HD PNG rendering
+- Maven - build system
 
 ---
 
@@ -188,9 +184,11 @@ MIT — use it, fork it, improve it.
 
 ## Author
 
-**Juan Felipe Oz** · [@JF0x0r](https://twitter.com/JF0x0r)
+<img width="2400" height="1522" alt="repshot-finding2" src="https://github.com/user-attachments/assets/c945978c-46cc-401e-9b56-07e6e5f29b99" />
 
-*Burp Champion · Application Security · Bug Bounty Hunter*
+**Juan Felipe Oz** · [@JF0x0r](https://twitter.com/Pwnedrar_)
+
+*Burp Champion · Application Security Engineer · Bug Bounty Hunter*
 
 ---
 

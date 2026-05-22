@@ -95,7 +95,7 @@ Requirements: Java 17+, Maven 3.8+
       
 4. The RepShot panel opens with your request and response loaded
 
-   <img width="1166" height="781" alt="image" src="https://github.com/user-attachments/assets/171d7fd0-987d-4604-882c-5fc85a539ae1" />
+   <img width="1159" height="779" alt="Panel-repshot" src="https://github.com/user-attachments/assets/06b2f99e-ce87-4741-8b29-3eccc5deb9ce" />
 
 ### Documenting a finding
 

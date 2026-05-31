@@ -318,7 +318,7 @@ public class CardRenderer {
 
         g.setFont(new Font("Monospaced", Font.PLAIN, 22));
         g.setColor(TEXT_MUTED);
-        g.drawString("⚡ RepShot  |  Created by Juan Felipe Oz aka @JF0x0r  |  portswigger.net",
+        g.drawString("⚡ RepShot | Created by Juan Felipe Oz aka @JF0x0r | portswigger.net",
             PADDING, fy + 46);
 
         for (int i = 0; i < 4; i++) {

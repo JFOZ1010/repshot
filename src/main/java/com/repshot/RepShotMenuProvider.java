@@ -54,7 +54,8 @@ public class RepShotMenuProvider implements ContextMenuItemsProvider {
                 frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
                 frame.setContentPane(panel);
                 frame.setSize(1100, 750);
-                frame.setLocationRelativeTo(null);
+                //frame.setLocationRelativeTo(null);
+                frame.setLocationRelativeTo(api.userInterface().swingUtils().suiteFrame()); //Funcional para BApp Store, ya que el frame principal no es el centro de la pantalla
                 frame.setVisible(true);
             });
         });

@@ -71,16 +71,23 @@ No more context switching. No more Flameshot. No more writing "An attacker could
 
 **Requirements:** Burp Suite 2023.x or later · Java 17+ on your system
 
+<img width="1178" height="638" alt="image" src="https://github.com/user-attachments/assets/f6207039-edd4-4928-ad83-51688a66eb5d" />
+
+<img width="907" height="284" alt="image" src="https://github.com/user-attachments/assets/b204e619-8fd4-4f73-849f-090f9b67073b" />
+
+
+
 ### Option B - Build from source
 
-```bash
+```ruby
 git clone https://github.com/JFOZ1010/repshot.git
 cd repshot
-mvn package
+mvn clean package
 # JAR will be at target/repshot-1.0.0.jar
 ```
+**Requirements**: Java 17+, Maven 3.8+
 
-Requirements: Java 17+, Maven 3.8+
+<img width="938" height="735" alt="image" src="https://github.com/user-attachments/assets/61025168-8ef3-40b2-829e-5f88cbd16c3f" />
 
 ---
 
